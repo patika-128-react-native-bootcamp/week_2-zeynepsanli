@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import InputBox from "../InputBox/InputBox";
 import styles from "./ScreenBottom.styles";
 
-const ScreenBottom = () => {
+const ScreenBottom = ({ submitHandler }) => {
 
     const [name, setName] = useState(null);
     const [price, setPrice] = useState(null);
@@ -17,7 +17,7 @@ const ScreenBottom = () => {
             name,
             price,
         };
-        console.log(product)
+        submitHandler(product)
     }
     return (
         <SafeAreaView style={styles.container}>

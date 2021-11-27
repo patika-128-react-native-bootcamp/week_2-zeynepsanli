@@ -1,27 +1,18 @@
-import React, { useState, memo } from 'react';
-import { TextInput, View } from 'react-native';
-//import Button from '../Button';
-
+import React from "react";
+import { Text, View, TextInput, StyleSheet } from 'react-native';
 import styles from './InputBox.styles';
-
-const InputBox = ({ onAdd }) => {
-
-    const [text, setText] = useState('');
-
-    function handleSendText() {
-        onAdd(text);
-    }
-
+const InputBox = ({ label, onChangeText, keyboardType }) => {
     return (
+
         <View style={styles.container}>
+            <Text style={styles.label}>{label}</Text>
             <View style={styles.input_container}>
-                <TextInput
-                    label='Name'
-                    onChangeText={setText}
-                />
+                <TextInput onChangeText={onChangeText} keyboardType={keyboardType} />
             </View>
+
         </View>
+
+
     );
 };
-
-export default memo(InputBox);
+export default InputBox;

@@ -2,17 +2,16 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
+        margin: 10,
     },
     input_container: {
-        flex: 1,
         backgroundColor: '#eceff1',
-        padding: 5,
-        margin: 10,
-        height: 50,
-        justifyContent: 'center',
+        margin: 5,
+        padding: 10,
         borderRadius: 5,
-        fontSize: 10
+        justifyContent: 'center',
     },
+    label: {
+        fontSize: 15,
+    }
 });
